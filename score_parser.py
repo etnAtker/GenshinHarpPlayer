@@ -18,7 +18,7 @@ def parse(score):
                 pri_score['notes'].append(int(token[0]) + pitch_map[token[1]])
             else:
                 pri_score['duration'].append(min_tick / int(token))
-                tick_duration += [60 / bpm / (min_tick / a_tempo))] * int(min_tick / int(token))
+                tick_duration += [60 / bpm / (min_tick / a_tempo)] * int(min_tick / int(token))
 
     return pri_score, tick_duration
 
